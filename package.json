@@ -10,9 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cashfreepayments/cashfree-js": "^1.0.5",
+    "@paypal/paypal-js": "^8.1.1",
+    "axios": "^1.7.7",
+    "nanoid": "^5.0.7",
     "react": "^18.3.1",
     "react-aspect-ratio": "^1.1.8",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
     "react-slideshow-image": "^4.3.1"
   },
   "devDependencies": {

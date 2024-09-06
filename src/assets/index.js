@@ -10,7 +10,7 @@ import Kolkata_Museum from "./Kolkata_Museum.webp"
 import Art from "./Art.webp"
 import right_arrow from "./right_arrow.svg"
 import amber_fort from "./amber_fort.webp"
-
+import check from "./check.svg"
 
 export {
     user,
@@ -24,5 +24,6 @@ export {
     Kolkata_Museum,
     Art,
     right_arrow,
-    amber_fort
+    amber_fort,
+    check
 };
