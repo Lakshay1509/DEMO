@@ -14,7 +14,7 @@ const routes = createBrowserRouter(
   createRoutesFromElements(
    <Route path='/' element={<Layout />}>, 
   <Route path='' element={<Home />} />
-  <Route path='/payment/:amount' element={<Payment />} />
+  <Route path='payment/:amount' element={<Payment />} />
   </Route>
   ),
 )
