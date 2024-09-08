@@ -4,14 +4,14 @@ import { useState } from "react";
 import Paypal from "./Paypal";
 
 function Payment() {
-  const { amount } = useParams();
+  const { amount ,customer,id,people} = useParams();
   const [checkout, setCheckout] = useState(false);
 
   return (
     <div className="w-full flex justify-center items-center mt-[50px]">
 
       {checkout ? (
-        <Paypal amount = {amount}/>
+        <Paypal amount = {amount} customer_id={customer} people={people} place_id={id}/>
       ) : (
         <div>
           <div className="w-full justify-center">Total Payable Amount : {amount} </div>
