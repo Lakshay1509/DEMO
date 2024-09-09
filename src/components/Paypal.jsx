@@ -69,7 +69,7 @@ function Paypal({ customer_id, amount, place_id, people }) {
 
     return (
         <div>
-            {paymentSuccess ? <Success id={successId} /> : <div ref={paypal}></div>}
+            {paymentSuccess ? <Success id={successId} amount={amount} /> : <div ref={paypal}></div>}
         </div>
     );
 }

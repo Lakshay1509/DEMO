@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { check } from "../assets/index.js";
 
-export default function Success({ id }) {
+const Success = ({ id,amount}) => {
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${id}`;
+
+  useEffect(() => {
+    const url = 'http://localhost:8000/api/v1/user/payment';
+    const data = { amount: amount, bookingId: id ,qrcode:qrCodeUrl};
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error('Error:', error));
+  }, [id]);
 
   return (
     <>
@@ -18,4 +34,6 @@ export default function Success({ id }) {
       </div>
     </>
   );
-}
+};
+
+export default Success;
